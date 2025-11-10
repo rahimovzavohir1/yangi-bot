@@ -7,5 +7,15 @@ bot.on("message", async function (msg) {
   const chatId = msg.chat.id;
   const text = msg.text;
   const firstname = msg.chat.first_name;
-  if (text == "/start");
+  if (text == "/start") {
+    bot.sendMessage(chatId,`Assalomu alakum, ${first_name}`),{
+        reply_markup: {
+            keyboard: [
+                [{text: "Boshlash ⚡️"}]
+                [{text: "Menu 📌"}], [{text: "Sozlamalar ⚙️"}],
+            ],
+            resize_keyboard: true,
+        },
+    };
+  } else if(text == "Boshlash ⚡️")
 });
