@@ -4,13 +4,26 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": 
+    },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
     "node-telegram-bot-api": "^0.66.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rahimovzavohir1/yangi-bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rahimovzavohir1/yangi-bot/issues"
+  },
+  "homepage": "https://github.com/rahimovzavohir1/yangi-bot#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.11"
   }
 }
