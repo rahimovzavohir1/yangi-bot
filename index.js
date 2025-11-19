@@ -1,6 +1,6 @@
 import TelegramBot from "node-telegram-bot-api"
 
-const TOKEN = "8438960736:AAEk-pjAckWfED44I1U4HjgOxEJTisKuBeI"
+
 
 const bot = new TelegramBot(TOKEN, { polling: true});
 
@@ -64,16 +64,21 @@ Quyidagi menyudan kerakli bo‘limni tanlang 👇
         },
       }
     );
-  } else {
+  } else if (text == "✍️ Ro‘yxatdan o‘tish") {
     bot.sendMessage(
       chatId,
-      `
-    ⚠️ Kechirasiz, men sizning xabaringizni tushunmadim.
-
-Iltimos, quyidagi tugmani bosing 👇
-/start
-
-    `
+      ` Iltimos, ro‘yxatdan o‘tish uchun quyidagi barcha ma’lumotlarni to‘ldiring 👇
+    `,
+    {
+      reply_markup: {
+        inline_keyboard: [
+            [{ text: "👤Ism", callback_data:"name" }],
+            [{ text: "👥Familiya", callback_data: "firstname" }],
+            [{ text: "🎂Yoshingiz", callback_data: "age" }],
+            [{ text: "📱Telefon nomeringiz", callback_data: "phonenumber" }],
+        ],
+      },
+    }
     );
   }
 });
